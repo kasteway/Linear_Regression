@@ -16,6 +16,9 @@ Imagine you're trying to predict your final grade in a class based on the amount
 
 3. Prediction: Once you have this line, you can use it to predict your grade. For example, if you study for 5 hours, you can see where that point is on the line and predict your grade.
 
+<img width="645" alt="Screenshot 2023-12-30 at 8 47 36 AM" src="https://github.com/kasteway/Linear_Regression/assets/62068733/1f66935a-61cf-4672-931f-b44a7d22ffa7">
+
+
 #### Why is it Important?
 
 - Simplicity: Linear Regression is straightforward and easy to understand, making it a great starting point for learning about more complex machine learning models.
@@ -28,19 +31,19 @@ Imagine you're trying to predict your final grade in a class based on the amount
 
 ##### Simple Linear Regression (Univariate Linear Regression):
 
-What It Is: This involves two variables - one independent variable and one dependent variable. It tries to establish a linear relationship between these two.
-Example: Predicting house prices based on the size of the house (where house price is the dependent variable and house size is the independent variable).
+- This involves two variables - one independent variable and one dependent variable. It tries to establish a linear relationship between these two.
+- Example: Predicting house prices based on the size of the house (where house price is the dependent variable and house size is the independent variable).
 
 ##### Multiple Linear Regression:
 
-What It Is: This involves more than one independent variable. It's used when the outcome depends on several factors.
-Example: Predicting a person's weight based on their height, age, and diet.
+- This involves more than one independent variable. It's used when the outcome depends on several factors.
+- Example: Predicting a person's weight based on their height, age, and diet.
 
 ##### Polynomial Regression:
 
-What It Is: A form of linear regression where the relationship between the independent variable and the dependent variable is modeled as an nth degree polynomial.
-Why It's 'Linear': Despite its name, polynomial regression is a form of linear regression because the coefficients are linear even if the variables are raised to a power.
-Example: Analyzing the growth rate of tissues or bacterial cultures, where the growth rate accelerates or decelerates over time.
+- A form of linear regression where the relationship between the independent variable and the dependent variable is modeled as an nth degree polynomial.
+- Why It's 'Linear': Despite its name, polynomial regression is a form of linear regression because the coefficients are linear even if the variables are raised to a power.
+- Example: Analyzing the growth rate of tissues or bacterial cultures, where the growth rate accelerates or decelerates over time.
 
 ---
 
