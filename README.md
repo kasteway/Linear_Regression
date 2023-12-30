@@ -1,5 +1,5 @@
 # Linear_Regression
-## from sklearn.linear_model import LinearRegression
+## from sklearn.linear_model import LinearRegression -> [Scikit-Learn Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)  
 
 ### Summary:
 
