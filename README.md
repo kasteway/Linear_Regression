@@ -103,17 +103,54 @@ Linear regression is an excellent starting point for statistical modeling and pr
 
 1. Batch Gradient Descent - calculates the gradient of the cost function with respect to the parameters for the entire training dataset. As a result, it updates the model parameters only after it has computed the gradients for the entire dataset.
    -
-   - Applications: Batch gradient descent is suitable for smaller datasets or when computational resources are sufficient to handle the entire dataset at once.
-   - Challenges: It can be slow and computationally intensive, particularly with very large datasets. Also, it might not handle well with very large-scale machine learning problems where the dataset doesn't fit into memory.
-   - 
-2. Stochastic Gradient Descent (SGD) - updates parameters for each training example. It's faster but results in a more fluctuating convergence path.
-   - 
-3. Mini-batch Gradient Descent - This is a compromise between batch and stochastic gradient descent. It updates parameters after computing the gradient on small batches of the training data, offering a balance between speed and stability.
-   -
+   
+  ### Advantages:
+  - Small to Medium-Sized Datasets: It's well-suited for smaller datasets or those of a moderate size where the entire dataset can be loaded into memory and processed together.
+  - Stable Error Gradient: Since it uses the entire dataset to compute the gradient at each step, it provides a stable error gradient and a consistent path towards convergence. This can be particularly useful in scenarios where stability is more important than speed.
+  - Simplified Implementation: Batch gradient descent is conceptually simpler and can be easier to implement and debug, as it doesn’t involve the complexity of random sampling or dealing with mini-batches.
+  - Convex Problems: It is highly effective for convex problems, where it's guaranteed to converge to the global minimum.
+  - Exact Gradient Calculation: The algorithm calculates the exact gradient of the cost function (no approximation), leading to reliable and consistent updates.
 
+### Challenges:
+  - Computational Intensity for Large Datasets: For very large datasets, batch gradient descent can be computationally expensive and time-consuming, as it requires the entire dataset to be processed at each iteration.
+  - Memory Constraints: It may not be feasible when the dataset is too large to fit into memory, limiting its applicability for very large-scale machine learning tasks.
+  - Slower Convergence in Practice: In practice, especially for large datasets, batch gradient descent might converge more slowly than its counterparts like SGD or mini-batch gradient descent.
+  - Local Minima and Saddle Points: In non-convex optimization problems (common in deep learning), batch gradient descent can get stuck in local minima or saddle points.
+  - Lack of Online Learning Capability: Unlike SGD, batch gradient descent is not suitable for online learning scenarios where the model needs to be updated as new data streams in.
+  - Less Robust to Noisy Data: Since it uses the entire dataset to calculate the gradient, it might be less robust to outliers or noisy data compared to SGD, where the noise can actually help escape local minima.
+
+2. Stochastic Gradient Descent (SGD) - updates parameters for each training example. It's faster but results in a more fluctuating convergence path.
+   -
+   ### Advantages:
+  - Large-scale Datasets: SGD is particularly effective for very large datasets where processing the entire dataset at once (as in batch gradient descent) is computationally impractical.
+  - Online Learning: It's well-suited for online learning scenarios where the model needs to be updated as new data arrives.
+  - Faster Convergence for Large Datasets: In cases where the dataset is sufficiently large, SGD can converge faster to a good solution compared to batch gradient descent.
+  - Convex and Non-convex Optimization: It's useful in both convex and non-convex optimization problems, making it versatile for various machine learning tasks.
+
+  ### Challenges:
+  - High Variance in Updates: The updates can be very noisy due to updating the parameters with only one data point at a time. This can lead to significant fluctuations in the cost function trajectory.
+  - Tuning of Learning Rate: SGD requires careful tuning of the learning rate. If the learning rate is too high, the algorithm might overshoot the minimum; if it's too low, convergence can be slow.
+  - May Require More Iterations: It may need more iterations to converge due to the noisy updates, which can be computationally expensive.
+  - Risk of Converging to Local Minima: In non-convex optimization problems, SGD has a higher risk of getting stuck in local minima.
+    
+4. Mini-batch Gradient Descent - This is a compromise between batch and stochastic gradient descent. It updates parameters after computing the gradient on small batches of the training data, offering a balance between speed and stability.
+   -
+  ### Advantages:
+  - Balance Between Efficiency and Computation Load: Mini-batch gradient descent strikes a balance between the efficiency of SGD and the stability of batch gradient descent.
+  - Suitable for Most Practical Applications: It's often the preferred choice in many practical machine learning tasks due to its balance of speed and convergence stability.
+  - Flexibility with Batch Size: It provides flexibility in terms of batch size, which can be adjusted according to the computational resources available.
+  - Parallelism and GPU Utilization: Mini-batches can be processed in parallel, making this method well-suited for GPU computations.
+
+  ### Challenges:
+  - Batch Size Selection: Choosing the right mini-batch size is critical. Too small, and the method behaves like SGD; too large, and it becomes similar to batch gradient descent.
+  - Learning Rate Tuning: Like SGD, it requires careful tuning of the learning rate for optimal performance.
+  - More Hyperparameters: It introduces an additional hyperparameter (batch size), which requires tuning.
+  - Potential for Slower Convergence: Depending on the batch size and the learning rate, mini-batch gradient descent can sometimes converge slower than both SGD and batch gradient descent.
+    
 ---
+
 ## Tips:
-- Gradient Descent -> is about iteratively adjusting the coefficients to minimize the difference between the predicted values and the actual values, as measured by a cost function like the MSE
+
 - Learning Rate -> The learning rate determines the size of the steps we take towards the minimum. If it's too large, we might overshoot the minimum; if it's too small, the algorithm might take too long to converge.
 - Convergence -> The process is repeated until the algorithm converges, meaning the change in the cost function is below a certain small threshold, or a maximum number of iterations is reached
 
