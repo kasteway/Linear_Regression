@@ -104,7 +104,7 @@ Linear regression is an excellent starting point for statistical modeling and pr
 1. Batch Gradient Descent - calculates the gradient of the cost function with respect to the parameters for the entire training dataset. As a result, it updates the model parameters only after it has computed the gradients for the entire dataset.
    -
    
-  ### Advantages:
+### Advantages:
   - Small to Medium-Sized Datasets: It's well-suited for smaller datasets or those of a moderate size where the entire dataset can be loaded into memory and processed together.
   - Stable Error Gradient: Since it uses the entire dataset to compute the gradient at each step, it provides a stable error gradient and a consistent path towards convergence. This can be particularly useful in scenarios where stability is more important than speed.
   - Simplified Implementation: Batch gradient descent is conceptually simpler and can be easier to implement and debug, as it doesn’t involve the complexity of random sampling or dealing with mini-batches.
