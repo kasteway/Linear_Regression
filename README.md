@@ -99,13 +99,17 @@ Linear regression is an excellent starting point for statistical modeling and pr
 
 ---
 
-## algorithms used for optimizing the cost function:
+## Algorithms used for optimizing the cost function:
 
 1. Batch Gradient Descent - calculates the gradient of the cost function with respect to the parameters for the entire training dataset. As a result, it updates the model parameters only after it has computed the gradients for the entire dataset.
+   -
    - Applications: Batch gradient descent is suitable for smaller datasets or when computational resources are sufficient to handle the entire dataset at once.
-   -  Challenges: It can be slow and computationally intensive, particularly with very large datasets. Also, it might not handle well with very large-scale machine learning problems where the dataset doesn't fit into memory.
+   - Challenges: It can be slow and computationally intensive, particularly with very large datasets. Also, it might not handle well with very large-scale machine learning problems where the dataset doesn't fit into memory.
+   - 
 2. Stochastic Gradient Descent (SGD) - updates parameters for each training example. It's faster but results in a more fluctuating convergence path.
+   - 
 3. Mini-batch Gradient Descent - This is a compromise between batch and stochastic gradient descent. It updates parameters after computing the gradient on small batches of the training data, offering a balance between speed and stability.
+   -
 
 ---
 ## Tips:
