@@ -98,3 +98,9 @@ Linear regression is an excellent starting point for statistical modeling and pr
 - Overfitting with Many Variables: In cases with many independent variables, the model might become overfit to the training data, leading to poor performance on unseen data.
 
 ---
+## Resources:
+
+- Wikipedia Simple Linear Regression Link - [Wikipedia Simple Linear Regression](https://en.wikipedia.org/wiki/Simple_linear_regression)
+- Scikit-Learn Linear Regression - [Scikit-Learn Linear Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) 
+
+---
