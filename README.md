@@ -101,8 +101,9 @@ Linear regression is an excellent starting point for statistical modeling and pr
 
 ## Algorithms used for optimizing the cost function:
 
-1. Batch Gradient Descent - calculates the gradient of the cost function with respect to the parameters for the entire training dataset. As a result, it updates the model parameters only after it has computed the gradients for the entire dataset.
-   -
+1. Batch Gradient Descent:
+  - calculates the gradient of the cost function with respect to the parameters for the entire training dataset. As a result, it updates the model parameters only after it has computed the gradients for the entire dataset.
+
    
 ### Advantages:
   - Small to Medium-Sized Datasets: It's well-suited for smaller datasets or those of a moderate size where the entire dataset can be loaded into memory and processed together.
@@ -119,8 +120,9 @@ Linear regression is an excellent starting point for statistical modeling and pr
   - Lack of Online Learning Capability: Unlike SGD, batch gradient descent is not suitable for online learning scenarios where the model needs to be updated as new data streams in.
   - Less Robust to Noisy Data: Since it uses the entire dataset to calculate the gradient, it might be less robust to outliers or noisy data compared to SGD, where the noise can actually help escape local minima.
 
-2. Stochastic Gradient Descent (SGD) - updates parameters for each training example. It's faster but results in a more fluctuating convergence path.
-   -
+2. Stochastic Gradient Descent (SGD):
+   - updates parameters for each training example. It's faster but results in a more fluctuating convergence path.
+   
    ### Advantages:
   - Large-scale Datasets: SGD is particularly effective for very large datasets where processing the entire dataset at once (as in batch gradient descent) is computationally impractical.
   - Online Learning: It's well-suited for online learning scenarios where the model needs to be updated as new data arrives.
@@ -133,8 +135,9 @@ Linear regression is an excellent starting point for statistical modeling and pr
   - May Require More Iterations: It may need more iterations to converge due to the noisy updates, which can be computationally expensive.
   - Risk of Converging to Local Minima: In non-convex optimization problems, SGD has a higher risk of getting stuck in local minima.
     
-4. Mini-batch Gradient Descent - This is a compromise between batch and stochastic gradient descent. It updates parameters after computing the gradient on small batches of the training data, offering a balance between speed and stability.
-   -
+3. Mini-batch Gradient Descent:
+   - This is a compromise between batch and stochastic gradient descent. It updates parameters after computing the gradient on small batches of the training data, offering a balance between speed and stability.
+   
   ### Advantages:
   - Balance Between Efficiency and Computation Load: Mini-batch gradient descent strikes a balance between the efficiency of SGD and the stability of batch gradient descent.
   - Suitable for Most Practical Applications: It's often the preferred choice in many practical machine learning tasks due to its balance of speed and convergence stability.
