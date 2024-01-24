@@ -157,7 +157,7 @@ Linear regression is an excellent starting point for statistical modeling and pr
 - Learning Rate -> The learning rate determines the size of the steps we take towards the minimum. If it's too large, we might overshoot the minimum; if it's too small, the algorithm might take too long to converge.
 - Convergence -> The process is repeated until the algorithm converges, meaning the change in the cost function is below a certain small threshold, or a maximum number of iterations is reached
 - Feature Scaling -> helps in speeding up the convergence of gradient descent by ensuring that all features are on a similar scale. This is because gradient descent updates the model parameters in a direction that reduces the cost function, and if one feature has a very large range, it can dominate the direction of the gradient and make the optimization process inefficient.
-
+-
 
 ---
 
