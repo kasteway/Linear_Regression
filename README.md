@@ -27,6 +27,9 @@ Linear regression is an excellent starting point for statistical modeling and pr
 - Simplicity: Linear Regression is straightforward and easy to understand, making it a great starting point for learning about more complex machine learning models.
 - Foundation: It forms the basis for understanding how we can use data to make predictions, which is a core aspect of machine learning.
 
+![Screenshot 2024-01-27 at 11 24 29 AM](https://github.com/kasteway/Linear_Regression/assets/62068733/c97f04e8-3fd9-4ecf-9c2b-d182e825cb51)
+
+![Screenshot 2024-01-27 at 11 25 41 AM](https://github.com/kasteway/Linear_Regression/assets/62068733/611585e0-08b0-44a3-a462-e58c71e579d4)
 
 ---
 
